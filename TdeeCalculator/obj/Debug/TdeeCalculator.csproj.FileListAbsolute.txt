@@ -1,0 +1,11 @@
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\TdeeCalculator.exe.config
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\TdeeCalculator.exe
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\TdeeCalculator.pdb
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.csprojResolveAssemblyReference.cache
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.Form1.resources
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.Properties.Resources.resources
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.csproj.GenerateResource.Cache
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.exe
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.pdb
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\Model.dll
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\Model.pdb
