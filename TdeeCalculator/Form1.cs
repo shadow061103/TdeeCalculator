@@ -67,12 +67,12 @@ namespace TdeeCalculator
                 lblMsg.Text = "年齡輸入有誤，請再確認";
                 return;
             }
-            if (!double.TryParse(tbHeight.Text, out Weight))
+            if (!double.TryParse(tbWeight.Text, out Weight))
             {
                 lblMsg.Text = "身高輸入有誤，請再確認";
                 return;
             }
-            if (!double.TryParse(tbWeight.Text, out Height))
+            if (!double.TryParse(tbHeight.Text, out Height))
             {
                 lblMsg.Text = "體重輸入有誤，請再確認";
                 return;
