@@ -38,10 +38,15 @@
             this.tbHeight = new System.Windows.Forms.TextBox();
             this.tbWeight = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbActivity = new System.Windows.Forms.ComboBox();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.ckLabor = new System.Windows.Forms.CheckBox();
+            this.ckIntensity = new System.Windows.Forms.CheckBox();
+            this.ckMail = new System.Windows.Forms.CheckBox();
+            this.tbMail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbGoal = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cbGender
@@ -51,100 +56,99 @@
             this.cbGender.Items.AddRange(new object[] {
             "男生",
             "女生"});
-            this.cbGender.Location = new System.Drawing.Point(199, 31);
+            this.cbGender.Location = new System.Drawing.Point(149, 25);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(232, 38);
+            this.cbGender.Size = new System.Drawing.Size(175, 31);
             this.cbGender.TabIndex = 0;
             this.cbGender.Text = "請選擇";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(33, 31);
+            this.label1.Location = new System.Drawing.Point(25, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 34);
+            this.label1.Size = new System.Drawing.Size(75, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "性別";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(33, 83);
+            this.label2.Location = new System.Drawing.Point(25, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 37);
+            this.label2.Size = new System.Drawing.Size(75, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "年齡";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(33, 147);
+            this.label3.Location = new System.Drawing.Point(25, 118);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 35);
+            this.label3.Size = new System.Drawing.Size(91, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "身高(cm)";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(33, 206);
+            this.label4.Location = new System.Drawing.Point(25, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 35);
+            this.label4.Size = new System.Drawing.Size(75, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = "體重(KG)";
             // 
             // tbAge
             // 
             this.tbAge.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbAge.Location = new System.Drawing.Point(199, 83);
+            this.tbAge.Location = new System.Drawing.Point(149, 66);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
-            this.tbAge.Size = new System.Drawing.Size(232, 38);
+            this.tbAge.Size = new System.Drawing.Size(175, 32);
             this.tbAge.TabIndex = 5;
             // 
             // tbHeight
             // 
             this.tbHeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbHeight.Location = new System.Drawing.Point(199, 147);
+            this.tbHeight.Location = new System.Drawing.Point(149, 118);
+            this.tbHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbHeight.Name = "tbHeight";
-            this.tbHeight.Size = new System.Drawing.Size(232, 38);
+            this.tbHeight.Size = new System.Drawing.Size(175, 32);
             this.tbHeight.TabIndex = 6;
             // 
             // tbWeight
             // 
             this.tbWeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbWeight.Location = new System.Drawing.Point(199, 206);
+            this.tbWeight.Location = new System.Drawing.Point(149, 165);
+            this.tbWeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbWeight.Name = "tbWeight";
-            this.tbWeight.Size = new System.Drawing.Size(232, 38);
+            this.tbWeight.Size = new System.Drawing.Size(175, 32);
             this.tbWeight.TabIndex = 7;
             // 
             // btnCalculate
             // 
             this.btnCalculate.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCalculate.Location = new System.Drawing.Point(199, 317);
+            this.btnCalculate.Location = new System.Drawing.Point(29, 397);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(207, 67);
+            this.btnCalculate.Size = new System.Drawing.Size(295, 54);
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "計算";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl.ForeColor = System.Drawing.Color.Red;
-            this.lbl.Location = new System.Drawing.Point(81, 403);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(52, 25);
-            this.lbl.TabIndex = 9;
-            this.lbl.Text = "結果";
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(33, 264);
+            this.label5.Location = new System.Drawing.Point(25, 211);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 34);
+            this.label5.Size = new System.Drawing.Size(75, 27);
             this.label5.TabIndex = 11;
             this.label5.Text = "活動量";
             // 
@@ -153,14 +157,16 @@
             this.cbActivity.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbActivity.FormattingEnabled = true;
             this.cbActivity.Items.AddRange(new object[] {
-            "Sedentary(office job)",
-            "Light Exercise(1-2days/W)",
-            "Moderate Exercise(3-5days/W)",
-            "Heavy Exercise(6-7days/W)",
-            "Athlete(2 oer day)"});
-            this.cbActivity.Location = new System.Drawing.Point(199, 264);
+            "完全沒有運動",
+            "一週運動三次",
+            "一週運動四次",
+            "一週運動五次",
+            "一週運動六次",
+            "一週運動七次"});
+            this.cbActivity.Location = new System.Drawing.Point(149, 211);
+            this.cbActivity.Margin = new System.Windows.Forms.Padding(2);
             this.cbActivity.Name = "cbActivity";
-            this.cbActivity.Size = new System.Drawing.Size(356, 38);
+            this.cbActivity.Size = new System.Drawing.Size(175, 31);
             this.cbActivity.TabIndex = 10;
             this.cbActivity.Text = "請選擇";
             // 
@@ -169,20 +175,97 @@
             this.lblMsg.AutoSize = true;
             this.lblMsg.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblMsg.ForeColor = System.Drawing.Color.Red;
-            this.lblMsg.Location = new System.Drawing.Point(178, 403);
+            this.lblMsg.Location = new System.Drawing.Point(116, 467);
+            this.lblMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(0, 25);
+            this.lblMsg.Size = new System.Drawing.Size(0, 20);
             this.lblMsg.TabIndex = 12;
+            // 
+            // ckLabor
+            // 
+            this.ckLabor.AutoSize = true;
+            this.ckLabor.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ckLabor.Location = new System.Drawing.Point(38, 306);
+            this.ckLabor.Name = "ckLabor";
+            this.ckLabor.Size = new System.Drawing.Size(140, 24);
+            this.ckLabor.TabIndex = 13;
+            this.ckLabor.Text = "是否為勞力工作";
+            this.ckLabor.UseVisualStyleBackColor = true;
+            // 
+            // ckIntensity
+            // 
+            this.ckIntensity.AutoSize = true;
+            this.ckIntensity.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ckIntensity.Location = new System.Drawing.Point(205, 306);
+            this.ckIntensity.Name = "ckIntensity";
+            this.ckIntensity.Size = new System.Drawing.Size(156, 24);
+            this.ckIntensity.TabIndex = 14;
+            this.ckIntensity.Text = "訓練強度是否特高";
+            this.ckIntensity.UseVisualStyleBackColor = true;
+            // 
+            // ckMail
+            // 
+            this.ckMail.AutoSize = true;
+            this.ckMail.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ckMail.Location = new System.Drawing.Point(38, 338);
+            this.ckMail.Name = "ckMail";
+            this.ckMail.Size = new System.Drawing.Size(188, 24);
+            this.ckMail.TabIndex = 15;
+            this.ckMail.Text = "是否須將結果寄至信箱";
+            this.ckMail.UseVisualStyleBackColor = true;
+            this.ckMail.CheckedChanged += new System.EventHandler(this.ckMail_CheckedChanged);
+            // 
+            // tbMail
+            // 
+            this.tbMail.Location = new System.Drawing.Point(38, 368);
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Size = new System.Drawing.Size(286, 22);
+            this.tbMail.TabIndex = 16;
+            this.tbMail.Text = "Email";
+            this.tbMail.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(25, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 27);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "目標";
+            // 
+            // cbGoal
+            // 
+            this.cbGoal.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbGoal.FormattingEnabled = true;
+            this.cbGoal.Items.AddRange(new object[] {
+            "最少增肌",
+            "正常增肌",
+            "瘋狂增肌",
+            "正常減脂",
+            "瘋狂減脂",
+            "可能消耗肌肉"});
+            this.cbGoal.Location = new System.Drawing.Point(149, 257);
+            this.cbGoal.Margin = new System.Windows.Forms.Padding(2);
+            this.cbGoal.Name = "cbGoal";
+            this.cbGoal.Size = new System.Drawing.Size(175, 31);
+            this.cbGoal.TabIndex = 17;
+            this.cbGoal.Text = "請選擇";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 457);
+            this.ClientSize = new System.Drawing.Size(376, 497);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbGoal);
+            this.Controls.Add(this.tbMail);
+            this.Controls.Add(this.ckMail);
+            this.Controls.Add(this.ckIntensity);
+            this.Controls.Add(this.ckLabor);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbActivity);
-            this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.tbWeight);
             this.Controls.Add(this.tbHeight);
@@ -193,6 +276,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbGender);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "TDEE計算機";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -212,10 +296,15 @@
         private System.Windows.Forms.TextBox tbHeight;
         private System.Windows.Forms.TextBox tbWeight;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbActivity;
         private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.CheckBox ckLabor;
+        private System.Windows.Forms.CheckBox ckIntensity;
+        private System.Windows.Forms.CheckBox ckMail;
+        private System.Windows.Forms.TextBox tbMail;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbGoal;
     }
 }
 

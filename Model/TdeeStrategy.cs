@@ -12,7 +12,7 @@ namespace Model
 
         protected double _deduct; //BMR 減去值
         public double _activity;//活動量
-
+        public double _goalPlus;//目標乘數
         private double _bmr;
         private double _tdee;
         public double BMR {
@@ -21,11 +21,18 @@ namespace Model
                 return _bmr;
             }
         }
-        public string TDEE {
+        public double TDEE {
             get {
                 GetTDEE();
-                return  string.Format($"{_tdee:F0}");
+                return _tdee;
             }
+        }
+        public string Result {
+            get {
+                Nutrition n = new Nutrition(Human.Weight, TDEE);
+                return n.GetNutritionResult();
+            }
+
         }
         private void GetBMR() //計算基礎代謝
         {
@@ -40,9 +47,9 @@ namespace Model
         }
         private void GetTDEE()
         {
-            _tdee=BMR * _activity;
-
-
+            double multi = _activity + (Human.isHighintensity ? 0.08:0) + (Human.isLabor ? 0.25:0);
+            _tdee =BMR * multi * (1+_goalPlus);
+            
         }
 
 

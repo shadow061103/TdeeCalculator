@@ -3,3 +3,7 @@ D:\Project\VisualStudio開發專案\TdeeCalculator\Model\bin\Debug\Model.pdb
 D:\Project\VisualStudio開發專案\TdeeCalculator\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Project\VisualStudio開發專案\TdeeCalculator\Model\obj\Debug\Model.dll
 D:\Project\VisualStudio開發專案\TdeeCalculator\Model\obj\Debug\Model.pdb
+D:\VisualStudio開發專案\TdeeCalculator\Model\bin\Debug\Model.dll
+D:\VisualStudio開發專案\TdeeCalculator\Model\bin\Debug\Model.pdb
+D:\VisualStudio開發專案\TdeeCalculator\Model\obj\Debug\Model.dll
+D:\VisualStudio開發專案\TdeeCalculator\Model\obj\Debug\Model.pdb
