@@ -20,3 +20,5 @@ D:\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculat
 D:\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.Form1.resources
 D:\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.Properties.Resources.resources
 D:\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\obj\Debug\TdeeCalculator.csproj.GenerateResource.Cache
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\EPPlus.dll
+D:\Project\VisualStudio開發專案\TdeeCalculator\TdeeCalculator\bin\Debug\EPPlus.xml

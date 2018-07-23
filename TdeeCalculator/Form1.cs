@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using System.IO;
+
 namespace TdeeCalculator
 {
     public partial class Form1 : Form
@@ -25,33 +27,26 @@ namespace TdeeCalculator
         {
             lblMsg.Text = "";
             tbMail.GotFocus += new EventHandler(this.TbGetFocus);
-            tbMail.LostFocus+= new EventHandler(this.TbLostFocus);
-            //test
-            tbAge.Text = "25";
-            tbHeight.Text = "170";
-            tbWeight.Text = "66.5";
-            cbActivity.SelectedIndex = 4;
-            cbGoal.SelectedIndex = 1;
-            cbGender.SelectedIndex = 0;
+            tbMail.LostFocus += new EventHandler(this.TbLostFocus);
             
-
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             int Age = 0;
-            double Weight=0, Height = 0;
-            if(!CheckInput(ref Age, ref Weight, ref Height))return;
-            Human human = new Human() {
-                Age =Age,
-                Weight =Weight,
-                Height =Height,
-                Gender =(GenderType)cbGender.SelectedIndex,
-                Activity=(ActivityType)cbActivity.SelectedIndex,
-                Goal=(Goal)cbGoal.SelectedIndex,
-                isHighintensity=ckIntensity.Checked,
-                isLabor=ckLabor.Checked
-                
+            double Weight = 0, Height = 0;
+            if (!CheckInput(ref Age, ref Weight, ref Height)) return;
+            Human human = new Human()
+            {
+                Age = Age,
+                Weight = Weight,
+                Height = Height,
+                Gender = (GenderType)cbGender.SelectedIndex,
+                Activity = (ActivityType)cbActivity.SelectedIndex,
+                Goal = (Goal)cbGoal.SelectedIndex,
+                isHighintensity = ckIntensity.Checked,
+                isLabor = ckLabor.Checked
+
             };
             try
             {
@@ -62,6 +57,8 @@ namespace TdeeCalculator
                 sb.Append($"蛋白質:{strategy.Nutrituon.Protein}\r\n");
                 sb.Append($"脂肪:{strategy.Nutrituon.Fat}\r\n");
                 MessageBox.Show(sb.ToString());
+                //
+                SendMail(human, strategy.Nutrituon, strategy.TDEE);
             }
             catch (Exception ex)
             {
@@ -69,11 +66,33 @@ namespace TdeeCalculator
             }
 
 
-            
+
+
 
 
 
         }
+        public void SendMail(Human human, Nutrition nutrition, double Tdee)
+        {
+            if (ckMail.Checked)
+            {
+                try
+                {
+                    //建立excel
+                    MemoryStream fs = MailService.GenerateExcel(human, nutrition, Tdee);
+                    //寄信
+                    MailService.SendMail(tbMail.Text.Trim(), fs);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+
+            }
+
+        }
+
         #region 檢查輸入
         /// <summary>
         /// 檢查輸入
@@ -81,9 +100,9 @@ namespace TdeeCalculator
         /// <param name="Age"></param>
         /// <param name="Weight"></param>
         /// <param name="Height"></param>
-        public bool CheckInput(ref int Age,ref double Weight,ref double Height)
+        public bool CheckInput(ref int Age, ref double Weight, ref double Height)
         {
-            if (cbGender.SelectedIndex == -1 )
+            if (cbGender.SelectedIndex == -1)
             {
                 lblMsg.Text = "請選擇性別跟活動量";
                 return false;
@@ -137,10 +156,10 @@ namespace TdeeCalculator
         private void TbGetFocus(object sender, EventArgs e)
         {
             TextBox tb = sender as TextBox;
-            if(tb.Text == "Email")
+            if (tb.Text == "Email")
             {
                 tb.Text = "";
-                tb.ForeColor = Color.Gray;
+
             }
 
         }
@@ -150,9 +169,23 @@ namespace TdeeCalculator
             if (tb.Text == "")
             {
                 tb.Text = "Email";
-                tb.ForeColor = Color.White;
+
             }
         }
         #endregion
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("TDEE(Total Daily Energy Expenditure) =  基礎代謝(BMR) + 活動消耗 + 運動消耗 + 食物產熱效應 + 運動後燃"+Environment.NewLine);
+            sb.Append(" 基礎代謝：用來維持你的心跳，呼吸，血液循環等等需要的熱量" + Environment.NewLine);
+            sb.Append("活動消耗：走路，刷牙，打掃，寫字，讀書所消耗的熱量" + Environment.NewLine);
+            sb.Append("運動消耗：跑步，上健身房等所消耗的熱量" + Environment.NewLine);
+            sb.Append("食物產熱效應：身體消化食物所消耗的熱量 (一般估計是食物熱量的10%左右，例如你吃100卡的食物，身體需要消耗10卡去消化它)" + Environment.NewLine);
+            sb.Append("運動後燃：如果你的運動給予肌肉足夠的刺激，身體會在運動後消耗更多熱量修復肌肉" + Environment.NewLine);
+
+
+            MessageBox.Show(sb.ToString(),"小知識",MessageBoxButtons.OK);
+        }
     }
 }

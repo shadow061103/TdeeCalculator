@@ -47,6 +47,7 @@
             this.tbMail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbGoal = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // cbGender
@@ -104,6 +105,7 @@
             this.tbAge.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbAge.Location = new System.Drawing.Point(199, 82);
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAge.MaxLength = 2;
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(232, 38);
             this.tbAge.TabIndex = 5;
@@ -113,6 +115,7 @@
             this.tbHeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbHeight.Location = new System.Drawing.Point(199, 148);
             this.tbHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbHeight.MaxLength = 3;
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(232, 38);
             this.tbHeight.TabIndex = 6;
@@ -122,6 +125,7 @@
             this.tbWeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbWeight.Location = new System.Drawing.Point(199, 206);
             this.tbWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbWeight.MaxLength = 3;
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(232, 38);
             this.tbWeight.TabIndex = 7;
@@ -250,11 +254,23 @@
             this.cbGoal.TabIndex = 17;
             this.cbGoal.Text = "請選擇";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(396, 584);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(67, 15);
+            this.linkLabel1.TabIndex = 19;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "了解更多";
+            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 621);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbGoal);
             this.Controls.Add(this.tbMail);
@@ -303,6 +319,7 @@
         private System.Windows.Forms.TextBox tbMail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbGoal;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
