@@ -46,16 +46,18 @@
     <Compile Include="Enum\ActivityType.cs" />
     <Compile Include="Enum\GenderType.cs" />
     <Compile Include="Enum\Goal.cs" />
+    <Compile Include="Factory\GenericFactory.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Nutrition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Attribute\StrategyAttribute.cs" />
     <Compile Include="Factory\StrategyFactory.cs" />
+    <Compile Include="Service\CalculateService.cs" />
+    <Compile Include="Service\ICalculate.cs" />
+    <Compile Include="Service\RegularService.cs" />
     <Compile Include="TdeeStrategy.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

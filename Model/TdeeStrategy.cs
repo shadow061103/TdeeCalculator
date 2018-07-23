@@ -9,64 +9,46 @@ namespace Model
    public class TdeeStrategy
     {
         public Human Human { get; set; }
+        ICalculate calculate;
+        public TdeeStrategy(double deduct) {
+            //用泛型工廠建立實體
+            calculate= GenericFactory.CreateInastance<ICalculate>(typeof(CalculateService), new object[] { deduct });
+        }
 
-        protected double _deduct; //BMR 減去值
-        public double _activity;//活動量
-        public double _goalPlus;//目標乘數
-        private double _bmr;
-        private double _tdee;
+
         public double BMR {
             get {
-                GetBMR();
-                return _bmr;
+               
+                return calculate.CalculateBMR(Human);
             }
         }
         public double TDEE {
             get {
-                GetTDEE();
-                return _tdee;
+                
+                return calculate.CalculateTdee(Human);
             }
         }
-        public string Result {
-            get {
-                Nutrition n = new Nutrition(Human.Weight, TDEE);
-                return n.GetNutritionResult();
-            }
-
-        }
-        private void GetBMR() //計算基礎代謝
+        public Nutrition Nutrituon
         {
-            if (Human.Weight > 0 && Human.Height > 0 && Human.Age > 0)
+            get
             {
-                _bmr = (10 * Human.Weight) + (6.25 * Human.Height) - (5 * Human.Age) + _deduct; //BMR公式
-            }
-            else
-            {
-                _bmr = -1;
+                return calculate.CalculateNutrition(Human);
             }
         }
-        private void GetTDEE()
-        {
-            double multi = _activity + (Human.isHighintensity ? 0.08:0) + (Human.isLabor ? 0.25:0);
-            _tdee =BMR * multi * (1+_goalPlus);
-            
-        }
-
-
-
+        
     }
     public class ManTdeeStrategy : TdeeStrategy
     {
-        public ManTdeeStrategy()
+        public ManTdeeStrategy():base(5)
         {
-            _deduct = 5;
+           
         }
     }
     public class WomanTdeeStrategy : TdeeStrategy
     {
-        public WomanTdeeStrategy()
+        public WomanTdeeStrategy():base(-161)
         {
-            _deduct = -161;
+           
         }
     }
 

@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-   public static class AttributeHelper
+   public static class AttributeHelper//擴充方法
     {
-        
-
         public static Type GetStrategyType(this GenderType gender)
         {
             FieldInfo data = typeof(GenderType).GetField(gender.ToString());

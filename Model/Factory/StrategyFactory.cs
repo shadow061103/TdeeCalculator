@@ -14,8 +14,6 @@ namespace Model
             Type type = human.Gender.GetStrategyType();
             TdeeStrategy strategy = (TdeeStrategy)Activator.CreateInstance(type);//建立策略實體
             strategy.Human = human;
-            strategy._activity = human.Activity.GetActivityType();
-            strategy._goalPlus = human.Goal.GetTdeePlus();
             return strategy;
 
         }

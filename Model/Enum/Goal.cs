@@ -14,12 +14,14 @@ namespace Model
         BuildMuscle_Normal = 1,
         [Goal(0.15)]
         BuildMuscle_More = 2,
+        [Goal(0)]
+        Mailtain = 3,
         [Goal(-0.15)]
-        LoseFat_less = 3,
+        LoseFat_less = 4,
         [Goal(-0.2)]
-        LoseFat_Normal = 4,
+        LoseFat_Normal = 5,
         [Goal(-0.25)]
-        LoseFat__More = 5
+        LoseFat__More = 6
 
     }
 }

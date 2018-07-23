@@ -53,9 +53,23 @@ namespace TdeeCalculator
                 isLabor=ckLabor.Checked
                 
             };
-            TdeeStrategy strategy = StrategyFactory.GetStrategy(human);
-            MessageBox.Show("計算結果為" + string.Format($"{strategy.TDEE:F0}"+Environment.NewLine+ strategy.Result));
+            try
+            {
+                TdeeStrategy strategy = StrategyFactory.GetStrategy(human);
+                StringBuilder sb = new StringBuilder();
+                sb.Append($"計算結果為Tdee:{strategy.TDEE}\r\n");
+                sb.Append($"碳水化合物:{strategy.Nutrituon.Carbon}\r\n");
+                sb.Append($"蛋白質:{strategy.Nutrituon.Protein}\r\n");
+                sb.Append($"脂肪:{strategy.Nutrituon.Fat}\r\n");
+                MessageBox.Show(sb.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
+
+            
 
 
 
@@ -98,6 +112,15 @@ namespace TdeeCalculator
             {
                 lblMsg.Text = "體重輸入有誤，請再確認";
                 return false;
+            }
+            string Msg = "";
+            if (ckMail.Checked)
+            {
+                if (!RegularService.CheckFormat(tbMail.Text, @"\w[-.\w]*\@[-a-z0-9]+(\.[a-z0-9]+)*\.(com|edu|info)", ref Msg))
+                {
+                    lblMsg.Text = "Email" + Msg;
+                    return false;
+                }
             }
             return true;
         }
