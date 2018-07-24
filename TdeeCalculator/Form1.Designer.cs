@@ -105,7 +105,7 @@
             this.tbAge.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbAge.Location = new System.Drawing.Point(199, 82);
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbAge.MaxLength = 2;
+            this.tbAge.MaxLength = 10;
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(232, 38);
             this.tbAge.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.tbHeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbHeight.Location = new System.Drawing.Point(199, 148);
             this.tbHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbHeight.MaxLength = 3;
+            this.tbHeight.MaxLength = 10;
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(232, 38);
             this.tbHeight.TabIndex = 6;
@@ -125,7 +125,7 @@
             this.tbWeight.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbWeight.Location = new System.Drawing.Point(199, 206);
             this.tbWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbWeight.MaxLength = 3;
+            this.tbWeight.MaxLength = 10;
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(232, 38);
             this.tbWeight.TabIndex = 7;
@@ -184,7 +184,7 @@
             this.ckLabor.AutoSize = true;
             this.ckLabor.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ckLabor.Location = new System.Drawing.Point(51, 382);
-            this.ckLabor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckLabor.Margin = new System.Windows.Forms.Padding(4);
             this.ckLabor.Name = "ckLabor";
             this.ckLabor.Size = new System.Drawing.Size(174, 29);
             this.ckLabor.TabIndex = 13;
@@ -196,7 +196,7 @@
             this.ckIntensity.AutoSize = true;
             this.ckIntensity.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ckIntensity.Location = new System.Drawing.Point(273, 382);
-            this.ckIntensity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckIntensity.Margin = new System.Windows.Forms.Padding(4);
             this.ckIntensity.Name = "ckIntensity";
             this.ckIntensity.Size = new System.Drawing.Size(194, 29);
             this.ckIntensity.TabIndex = 14;
@@ -208,7 +208,7 @@
             this.ckMail.AutoSize = true;
             this.ckMail.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ckMail.Location = new System.Drawing.Point(51, 422);
-            this.ckMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckMail.Margin = new System.Windows.Forms.Padding(4);
             this.ckMail.Name = "ckMail";
             this.ckMail.Size = new System.Drawing.Size(234, 29);
             this.ckMail.TabIndex = 15;
@@ -219,7 +219,7 @@
             // tbMail
             // 
             this.tbMail.Location = new System.Drawing.Point(51, 460);
-            this.tbMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMail.Margin = new System.Windows.Forms.Padding(4);
             this.tbMail.Name = "tbMail";
             this.tbMail.Size = new System.Drawing.Size(380, 25);
             this.tbMail.TabIndex = 16;
